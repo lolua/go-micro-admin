@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package zhj.micro.admin.srv.user;
+
+service User {
+	rpc Login(Request) returns (Response) {}
+	rpc Get(Request) returns (Response) {}
+}
+
+message Message {
+    int64 Id = 1;
+	string Name = 2;
+	int64 Card = 3;
+	string Token = 4;
+	string CreateTime = 5;
+}
+message Request {
+	string name = 1;
+}
+
+message Response {
+	string msg = 1;
+	int32 code = 2;
+	Message data = 3;
+}

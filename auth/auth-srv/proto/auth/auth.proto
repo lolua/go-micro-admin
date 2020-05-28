@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package zhj.micro.admin.srv.auth;
+
+service Auth {
+	rpc CreateAccessToken(Request) returns (Response) {}
+	rpc DelAccessToken(Request) returns (Response) {}
+	rpc RefreshAccessToken(Request) returns (Response) {}
+	rpc ValidAccessToken(Request) returns (Response) {}
+}
+
+message Request {
+	int64 id = 1;
+	string name = 2;
+	string token = 3;
+}
+
+message Response {
+	string msg = 1;
+    int32 code = 2;
+    string token = 3;
+}
+
+

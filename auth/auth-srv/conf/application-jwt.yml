@@ -1,0 +1,3 @@
+app:
+  jwt:
+    secretKey: sc934jkds34s

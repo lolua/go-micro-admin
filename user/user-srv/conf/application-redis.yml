@@ -1,0 +1,7 @@
+app:
+  redis:
+    enabled: true
+    conn: 127.0.0.1:6379
+    password:
+    dbNum: 0
+    timeout: 3000
