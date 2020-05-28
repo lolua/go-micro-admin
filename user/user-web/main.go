@@ -19,7 +19,6 @@ func main() {
 			fmt.Sprintf("%s:%d", etcdConfig.GetHost(), etcdConfig.GetPort()),
 		}
 	})
-
 	// create new web service
 	service := web.NewService(
 		web.Name("zhj.micro.admin.web.user"),
